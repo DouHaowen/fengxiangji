@@ -30,7 +30,7 @@
 </ul>
 <h3>2.2 端末の中だけで扱い、運営者が取得しない情報</h3>
 <ul>
-<li>カメラの映像、撮影した写真、AI構図のための画像解析の結果（Apple の Vision フレームワークにより端末内で処理します）</li>
+<li>撮影した写真、カメラの映像（クラウドAI構図をオンにした場合に送る縮小画像を除きます）、端末内でのAI構図の解析結果（Apple の Vision フレームワークで処理します）</li>
 <li>ジャイロスコープ等のモーションセンサーの値（照準リングと水平器に使用します）</li>
 <li>アプリ内の設定、無料のAI構図の利用回数、ガイドの表示状況</li>
 <li>「写真に保存」を選んだときの保存処理（写真アプリへの追加のみを許可いただくもので、既存の写真は読み取りません）</li>
@@ -50,6 +50,7 @@
 <ol>
 <li>アカウントの提供、本人確認、ログイン状態の維持</li>
 <li>機種変更時などに取景設定を同期すること</li>
+<li>AI構図の解析（クラウドAI構図をオンにした場合）</li>
 <li>購入内容の記録、購入と利用者の照合、お問い合わせへの対応</li>
 <li>不正利用の防止、障害への対応</li>
 <li>法令に基づく対応</li>
@@ -112,7 +113,7 @@
 </ul>
 <h3>2.2 Handled only on your device — we never receive it</h3>
 <ul>
-<li>Camera images, the photos you take, and the image analysis used for AI framing (processed on the device by Apple’s Vision framework)</li>
+<li>The photos you take, camera images (except the downscaled frame sent when Cloud AI framing is on), and the on-device analysis for AI framing (Apple’s Vision framework)</li>
 <li>Motion sensor readings such as the gyroscope (for the aiming ring and the level)</li>
 <li>In-app settings, your free AI framing count, and which guides you have seen</li>
 <li>Saving to Photos when you choose to (add-only access; the App never reads your existing photos)</li>
@@ -132,6 +133,7 @@
 <ol>
 <li>To provide your account, verify who you are and keep you signed in</li>
 <li>To sync your camera settings, for example when you change phones</li>
+<li>To work out the framing, when Cloud AI framing is on</li>
 <li>To record purchases, match them to your account, and answer your questions</li>
 <li>To prevent abuse and fix problems</li>
 <li>To comply with the law</li>
@@ -193,7 +195,7 @@
 </ul>
 <h3>2.2 只在你的设备上处理、我们不会收到的信息</h3>
 <ul>
-<li>相机画面、你拍摄的照片，以及 AI 构图所做的图像分析（由 Apple 的 Vision 框架在设备上完成）</li>
+<li>你拍摄的照片、相机画面（开启云端 AI 构图时发送的缩小画面除外），以及设备上的 AI 构图分析（由 Apple 的 Vision 框架完成）</li>
 <li>陀螺仪等运动传感器数据（用于对准圆环和水平仪）</li>
 <li>应用内设置、免费 AI 构图次数、教程的查看状态</li>
 <li>你选择「存到相册」时的保存操作（只申请「添加照片」权限，不读取你相册里已有的照片）</li>
@@ -213,6 +215,7 @@
 <ol>
 <li>提供账号、确认身份、保持登录状态</li>
 <li>在更换手机等情况下同步取景设置</li>
+<li>分析 AI 构图（开启云端 AI 构图时）</li>
 <li>记录购买、将购买与账号对应、回复你的咨询</li>
 <li>防止滥用、处理故障</li>
 <li>依法律要求处理</li>
