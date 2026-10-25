@@ -14,11 +14,11 @@
 <!-- ============================ 日本語 ============================ -->
 <section class="lang-block" id="ja" lang="ja">
 <h1>プライバシーポリシー</h1>
-<p class="meta">制定日：2026年9月15日（同日改定：クラウドAI構図を追加）</p>
+<p class="meta">制定日：2026年9月15日 · 更新日：2026年10月25日</p>
 <p>カメラアプリ「逢相機」（以下「本アプリ」）の運営者である DOU HAOWEN（以下「運営者」）は、利用者の個人情報を以下のとおり取り扱います。</p>
 
 <h2>1. 基本方針</h2>
-<p>本アプリの撮影とフィルム加工は iPhone の中で行い、撮影した写真を送信することはありません。AI構図は、利用者が「クラウドAI構図」をオンにした場合に限り、ファインダーの縮小画像をクラウドで解析します（2.3）。オフのときは iPhone の中だけで解析します。アカウント登録は任意で、登録しなくてもすべての撮影機能を利用できます。</p>
+<p>基本撮影はログイン不要です。AI機能はログインが必要で、同意後に取景画像または選択した写真を送信します。利用枠とバックグラウンド生成を管理するため、AI処理をアカウントに関連付けます。</p>
 
 <h2>2. 取得する情報</h2>
 <h3>2.1 アカウントを作成した場合のみ取得する情報</h3>
@@ -30,9 +30,9 @@
 </ul>
 <h3>2.2 端末の中だけで扱い、運営者が取得しない情報</h3>
 <ul>
-<li>撮影した写真、カメラの映像（クラウドAI構図をオンにした場合に送る縮小画像を除きます）、端末内でのAI構図の解析結果（Apple の Vision フレームワークで処理します）</li>
+<li>通常の写真とカメラ映像（クラウドAI構図やAI創作で送信する画像を除く）、端末内の構図解析結果</li>
 <li>ジャイロスコープ等のモーションセンサーの値（照準リングと水平器に使用します）</li>
-<li>アプリ内の設定、無料のAI構図の利用回数、ガイドの表示状況</li>
+<li>端末内のお気に入りやガイド表示状況（同期設定とAI利用回数を除く）</li>
 <li>「写真に保存」を選んだときの保存処理（写真アプリへの追加のみを許可いただくもので、既存の写真は読み取りません）</li>
 </ul>
 <h3>2.3 クラウドAI構図をオンにした場合のみ送信する情報</h3>
@@ -40,15 +40,15 @@
 <li>AI構図のボタンを押したときのファインダー画像1枚（長辺約512ピクセルに縮小したもの）、端末で検出した顔の位置と構図候補の座標、アプリの表示言語</li>
 <li>送信先：運営者のサーバー（Supabase、東京リージョン）を経由して、OpenAI の画像解析モデル（アメリカ合衆国）に送ります。</li>
 <li>運営者のサーバーは画像を保存しません。OpenAI は API で受け取ったデータをモデルの学習に使用しませんが、不正利用の監視のため最長30日間保持することがあります。</li>
-<li>利用回数の上限を管理するため、IPアドレスを復元できない形（ソルト付きハッシュ）に変換して1日ごとの回数だけを数え、2日後に削除します。</li>
+<li>アカウントに関連付けて機能、回数、使用日、タスクID、状態、時刻を保存します。AI創作ではスタイル、画像ハッシュと生成サービスの処理IDも保存し、再開や結果取得に使います。ログインセッションを確認します。広告・追跡には使用しません。</li>
 <li>初めて使うときに同意を確認します。「設定 › クラウドAI構図」でいつでもオフにできます。</li>
 </ul>
 <h3>2.4 AI創作を使う場合のみ送信する情報</h3>
 <ul>
 <li>利用者が選んだ写真1枚（長辺約1536ピクセルに縮小したもの）と、選んだスタイル</li>
 <li>送信先：運営者のサーバー（Supabase、東京リージョン）を経由して、OpenAI の画像生成モデル（アメリカ合衆国）に送り、生成された画像を受け取ります。</li>
-<li>運営者のサーバーは写真も生成画像も保存しません。生成画像は利用者の iPhone の中にだけ保存されます。OpenAI は API で受け取ったデータをモデルの学習に使用しませんが、不正利用の監視のため最長30日間保持することがあります。</li>
-<li>利用回数の上限の管理は 2.3 と同じ方法（IPアドレスのソルト付きハッシュ、2日後に削除）で行います。</li>
+<li>運営者のデータベースは写真や生成画像そのものを保存しませんが、アカウントに関連付けた処理IDを保存します。OpenAI上でバックグラウンド生成を行い、入力と結果は同社の保持方針に従って保存されます。取得した作品はiPhoneに保存されます。OpenAI APIデータは通常、モデル学習に使用されません。</li>
+<li>AI創作の利用枠と処理状況は、2.3のアカウントに関連付けた記録で管理します。</li>
 <li>初めて使うときに同意を確認します。「設定 › AI創作で写真を送信」でいつでもオフにできます。</li>
 </ul>
 <h3>2.5 取得しない情報</h3>
@@ -106,11 +106,11 @@
 <!-- ============================ English ============================ -->
 <section class="lang-block" id="en" lang="en">
 <h1>Privacy Policy</h1>
-<p class="meta">Effective: September 15, 2026 (revised the same day to add Cloud AI framing)</p>
+<p class="meta">Effective: September 15, 2026 · Updated: October 25, 2026</p>
 <p>DOU HAOWEN (“we”), who operates the camera app 逢相機 (“the App”), handles your personal information as described below.</p>
 
 <h2>1. In short</h2>
-<p>Shooting and film looks happen on your iPhone, and the photos you take are never sent anywhere. AI framing analyses a downscaled viewfinder image in the cloud only if you turn on Cloud AI framing (section 2.3); otherwise it runs on your iPhone alone. An account is optional; every camera feature works without one.</p>
+<p>Basic photography works without signing in. AI features require an account and send a viewfinder image or selected photo after consent. AI processing is linked to your account for allowances and background generation.</p>
 
 <h2>2. What we collect</h2>
 <h3>2.1 Only if you create an account</h3>
@@ -122,9 +122,9 @@
 </ul>
 <h3>2.2 Handled only on your device — we never receive it</h3>
 <ul>
-<li>The photos you take, camera images (except the downscaled frame sent when Cloud AI framing is on), and the on-device analysis for AI framing (Apple’s Vision framework)</li>
+<li>Photos and camera frames, excluding images sent for cloud framing or AI creation, and on-device framing analysis</li>
 <li>Motion sensor readings such as the gyroscope (for the aiming ring and the level)</li>
-<li>In-app settings, your free AI framing count, and which guides you have seen</li>
+<li>Local favorites and tutorial progress (excluding synced settings and AI usage counts)</li>
 <li>Saving to Photos when you choose to (add-only access; the App never reads your existing photos)</li>
 </ul>
 <h3>2.3 Sent only if you turn on Cloud AI framing</h3>
@@ -132,15 +132,15 @@
 <li>When you press the AI framing button: one viewfinder image (downscaled to about 512 pixels on the long side), the positions of faces and candidate crops found on the device, and the App’s language</li>
 <li>It goes through our server (Supabase, Tokyo region) to OpenAI’s image model (United States).</li>
 <li>Our server does not store the image. OpenAI does not use data received through its API to train models, but may keep it for up to 30 days to monitor abuse.</li>
-<li>To enforce a daily limit we count requests per day against a salted hash of the IP address, which cannot be turned back into the address, and delete the counts after two days.</li>
+<li>We store account-linked feature usage, counts, dates, job IDs, states and timestamps. Illustration jobs also retain style, image hash and provider processing IDs for recovery and result retrieval. We check the login session. These records are not used for advertising or tracking.</li>
 <li>You are asked before the first use and can turn it off at any time in Settings › Cloud AI framing.</li>
 </ul>
 <h3>2.4 Sent only when you use AI creation</h3>
 <ul>
 <li>The one photo you choose (downscaled to about 1536 pixels on the long side) and the style you pick</li>
 <li>It goes through our server (Supabase, Tokyo region) to OpenAI’s image generation model (United States), and the generated image comes back.</li>
-<li>Our server stores neither the photo nor the result; the result is kept only on your iPhone. OpenAI does not use data received through its API to train models, but may keep it for up to 30 days to monitor abuse.</li>
-<li>The daily limit is enforced the same way as in 2.3 (a salted hash of the IP address, deleted after two days).</li>
+<li>Our database does not store photos or generated images themselves, but retains account-linked processing IDs. OpenAI handles background generation and retains inputs and results under its retention policies. Retrieved artwork is saved on your iPhone. OpenAI API data is not used for model training by default.</li>
+<li>Illustration allowances and status use the account-linked records in section 2.3.</li>
 <li>You are asked before the first use and can turn it off at any time in Settings › AI creation photo upload.</li>
 </ul>
 <h3>2.5 What we do not collect</h3>
@@ -197,11 +197,11 @@
 <!-- ============================ 简体中文 ============================ -->
 <section class="lang-block" id="zh" lang="zh-Hans">
 <h1>隐私政策</h1>
-<p class="meta">生效日期：2026 年 9 月 15 日（同日修订：新增云端 AI 构图）</p>
+<p class="meta">生效日期：2026 年 9 月 15 日 · 更新日期：2026 年 10 月 25 日</p>
 <p>相机应用「逢相機」（以下简称「本应用」）的运营者 DOU HAOWEN（以下简称「我们」）按以下方式处理你的个人信息。</p>
 
 <h2>1. 简要说明</h2>
-<p>本应用的拍摄和胶片调色在你的 iPhone 上完成，你拍下的照片不会发送到任何地方。只有在你开启「云端 AI 构图」时，AI 构图才会把缩小后的取景画面发到云端分析（见 2.3）；关闭时只在 iPhone 上分析。账号是可选的，不登录也能使用全部拍摄功能。</p>
+<p>基础拍摄无需登录。AI 功能需要账号，经同意后发送取景画面或选择的照片。为管理额度和后台生成，AI 处理会与账号关联。</p>
 
 <h2>2. 我们收集的信息</h2>
 <h3>2.1 仅在你创建账号时收集</h3>
@@ -213,9 +213,9 @@
 </ul>
 <h3>2.2 只在你的设备上处理、我们不会收到的信息</h3>
 <ul>
-<li>你拍摄的照片、相机画面（开启云端 AI 构图时发送的缩小画面除外），以及设备上的 AI 构图分析（由 Apple 的 Vision 框架完成）</li>
+<li>普通照片与相机画面（发送到云端构图或 AI 创作的图片除外），以及设备内构图分析结果</li>
 <li>陀螺仪等运动传感器数据（用于对准圆环和水平仪）</li>
-<li>应用内设置、免费 AI 构图次数、教程的查看状态</li>
+<li>本机收藏和教程状态（不包括同步设置与 AI 使用次数）</li>
 <li>你选择「存到相册」时的保存操作（只申请「添加照片」权限，不读取你相册里已有的照片）</li>
 </ul>
 <h3>2.3 仅在开启「云端 AI 构图」时发送的信息</h3>
@@ -223,15 +223,15 @@
 <li>按下 AI 构图按钮时的一张取景画面（缩小到长边约 512 像素）、设备上识别出的人脸位置和候选构图框的坐标、应用的显示语言</li>
 <li>发送路径：经由我们的服务器（Supabase 东京区域）发送给 OpenAI 的图像分析模型（美国）。</li>
 <li>我们的服务器不保存图片。OpenAI 不会将通过 API 收到的数据用于训练模型，但为防止滥用可能保留最多 30 天。</li>
-<li>为控制每日使用上限，我们把 IP 地址转换成无法还原的加盐哈希值，只按天统计次数，2 天后删除。</li>
+<li>我们按账号保存功能、次数、使用日期、任务 ID、状态和时间。插画还保留风格、图片哈希和生成服务处理 ID，用于恢复任务和获取结果，同时校验登录会话，不用于广告或跨应用跟踪。</li>
 <li>第一次使用前会征求你的同意，也可以随时在「设置 › 云端 AI 构图」中关闭。</li>
 </ul>
 <h3>2.4 仅在使用「AI 创作」时发送的信息</h3>
 <ul>
 <li>你选择的一张照片（缩小到长边约 1536 像素）和你选的风格</li>
 <li>发送路径：经由我们的服务器（Supabase 东京区域）发送给 OpenAI 的图像生成模型（美国），再取回生成的图片。</li>
-<li>我们的服务器既不保存照片，也不保存生成的图片；生成的图片只保存在你的 iPhone 上。OpenAI 不会将通过 API 收到的数据用于训练模型，但为防止滥用可能保留最多 30 天。</li>
-<li>每日次数上限的统计方式与 2.3 相同（IP 地址的加盐哈希，2 天后删除）。</li>
+<li>我们的数据库不保存照片或生成图片本身，但保留账号关联的处理 ID。OpenAI 进行后台生成，输入与结果按其保留政策保存；获取后的作品保存在 iPhone。OpenAI API 数据默认不用于模型训练。</li>
+<li>插画额度与状态使用 2.3 所述的账号关联记录管理。</li>
 <li>第一次使用前会征求你的同意，也可以随时在「设置 › AI 创作上传照片」中关闭。</li>
 </ul>
 <h3>2.5 我们不收集的信息</h3>
